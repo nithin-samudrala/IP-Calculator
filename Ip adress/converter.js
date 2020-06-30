@@ -166,16 +166,16 @@ function convert(){
             mask+=hsmaskCellVal;
             wildcard+=255-parseInt(hsmaskCellVal,10)
             maskBin+=hsmaskCellBin;
-            wildcardBin+=String("00000000"+parseInt(wildcard,10).toString(2)).slice(-8);
+            wildcardBin+=String("00000000"+parseInt(255-parseInt(hsmaskCellVal,10),10).toString(2)).slice(-8);
             netIDBin+=netCellBin;
             bcAddresBin+=bcCellBin;
             netID+=parseInt(netCellBin,2);
             bcAddres+=parseInt(bcCellBin,2);
             if(i==4) {                                         //hsbits>22
                 from+=(parseInt(netCellBin,2)+1);
-                fromBin+=String(parseInt(from,10).toString(2));
+                fromBin+=String("00000000"+parseInt((parseInt(netCellBin,2)+1),10).toString(2)).slice(-8);
                 to+=(parseInt(bcCellBin,2)-1);
-                toBin+=String(parseInt(to,10).toString(2));
+                toBin+=String("00000000"+parseInt((parseInt(bcCellBin,2)-1),10).toString(2)).slice(-8);
             }else{
                 from+=(parseInt(netCellBin,2));
                 fromBin+=netCellBin;
