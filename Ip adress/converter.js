@@ -41,7 +41,7 @@ function convert(){
             // }
             
         }
-        else if(first>127 && first<229 ){     //&& first<229
+        else if(first>126 && first<192 ){     //&& first<229
             clas='B'
 
             if(first==127 && second>15 && second<32 ){
