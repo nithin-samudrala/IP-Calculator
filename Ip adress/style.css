@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(89, 137, 151);
+    width: 50%;
+    margin: 20px auto;
+    font-size: 14px;
+}
+h1{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+input{
+    /* margin: 15px; */
+    padding: 10px;
+}
+form span{
+    color: black;
+    font-weight: bold;
+    margin: 10px;
+}
+span{
+    color: rgb(235, 252, 6);
+    margin-left: 7px;
+}
+#answer{
+    margin: 20px;
+}
+button{
+    padding: 10px;
+    border: 0px;
+    border-radius: 8px;
+    background-color: rgb(226, 219, 219);
+    cursor: pointer;
+    margin: 10px;
+}
+button:hover{
+    transform: scale(1.1);
+}
+@media(max-width:740px){
+    body{
+        width: 100%;
+        
+    }
+    input{
+        padding: 6px;
+    }
+    
+}

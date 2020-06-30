@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>IP converter</h1>
+    <form id="ip" onsubmit="return convert()">
+        <input type="text" name="IPAdress" id="IPAdress" placeholder="Enter IP Adress" value="192.168.0.1">
+        <span>/</span>
+        <input type="number" name='hostBits' id='hostBits' placeholder="No of Host ID bits" value="22">
+        <button type="submit" >converter</button>
+    </form>
+    <div id="answer">
+        
+        <p><pre>IP                         :<span id="ipval"></span></pre></p>
+
+        <p><pre>Private IP                 :<span id="pri"></span></pre></p>
+
+        <p><pre>Class                      :<span id="class"></span></pre></p>
+    
+        <p><pre>Mask:                      :<span id="mask"></span></pre></p>
+    
+        <p><pre>Mask(binary):              :<span id="maskBin"></span></pre></p>
+
+        <p><pre>Net ID                     :<span id="netId"></span></pre></p>
+
+        <p><pre>Net ID(binary)             :<span id="netIdBin"></span></pre></p>
+        
+        <p><pre>Broadcast Addres           :<span id="bcAddres"></span></pre></p>
+
+        <p><pre>Broadcast Addres(binary)   :<span id="bcAddresBin"></span></pre></p>
+
+        <p><pre>From(HostMin)              :<span id="from"></span></pre></p>
+
+        <p><pre>From(HostMin)(Binary)      :<span id="fromBin"></span></pre></p>
+
+        <p><pre>To(HostMax)                :<span id="to"></span></pre></p>
+
+        <p><pre>To(HostMax)(Binary)        :<span id="toBin"></span></pre></p>
+        
+        <p><pre>wildcard(HostMax)          :<span id="wildcard"></span></pre></p>
+        
+        <p><pre>wildcard(HostMax)(Binary)  :<span id="wildcardBin"></span></pre></p>
+
+
+    </div>
+    <script src="converter.js"></script>
+</body>
+</html>
